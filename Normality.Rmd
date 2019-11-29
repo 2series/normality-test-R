@@ -1,0 +1,31 @@
+---
+title: "Normality"
+author: "Rihad Variawa"
+date: "10/21/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+data <- rnorm(100)
+```
+
+```{r}
+qqnorm(data)
+```
+
+```{r}
+install.packages("olsrr")
+```
+
+```{r}
+require(olsrr)
+```
+
+```{r}
+ols_test_normality(data)
+```
+
